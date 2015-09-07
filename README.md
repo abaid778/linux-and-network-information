@@ -1,22 +1,26 @@
 # linux-and-network-information
 
-* FAIL OVER
-  * in fail over case we have to seprate servers on diffrent location
-  * if primary is stop working then after specific time secondry server start working
-  * when primary will be in working condition secondry server stop and  primary is start working again
+* AWS Failover simple architecture
+
+In my case we have 2 web server and 1 Database server, I used Amazon Router 53 DNS for the Failover Architecture with the DNS primary and secondry servers
+
+  * we have web servers on diffrent grographical location
+  * primary is stop working then after specific time DNS is point to secondry server  and this is decide by the Route health check
+  * when primary will be in working condition DNS point back to the primary server 
   
-* SSL Purchasing
+* Commercial SSL Purchasing and configuration
+1). Geneate the csr file 
+  * openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
   * when we purchase ssl , company ask some question
   * city, country
   * for what purpose for a company or personal
   * then they authorized
-  * they give you insurance if traffic decript or hacked, they will pay you
+
 * Paths
-  * relative, A relative path is a way to specify the location of a directory relative to another directory
+  * relative, A relativfe path is a way to specify the location of a directory relative to another directory
   * absolute,  the absolute path contains the root directory and all other subdirectories that contain a file or folder
   
 * Usage of teamviewer software
-* Patching, security updates after specific time
 * Main panel of AWS
   * where diffrent application run and we select according to our need
   * first OS then choose an instance type then configure instance detail then add storage  then instance tay and security
